@@ -18,6 +18,7 @@ app_secret = os.getenv('APP_SECRET')
 
 user_ids = os.getenv('USER_ID', '').split("\n")
 template_id = os.getenv('TEMPLATE_ID')
+notes = os.getenv("NOTES")
 
 if app_id is None or app_secret is None:
   print('请设置 APP_ID 和 APP_SECRET')
@@ -149,6 +150,10 @@ data = {
     "value": get_words(),
     "color": get_random_color()
   },
+  "notes":{
+    "value":notes,
+    "color":get_random_color()
+  }
 }
 
 if __name__ == '__main__':
