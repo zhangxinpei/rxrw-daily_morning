@@ -78,6 +78,15 @@ def get_words():
 def format_temperature(temperature):
   return math.floor(temperature)
 
+def get_tips():
+  lowset = math.floor(weather['low'])
+  if lowset < 20:
+    return "今天温度较低，小可爱记得添衣哦"
+  elif lowset <25:
+    return "今天温度始终，小可爱正常传小外套就好咯"
+  else:
+    return "今天温度较暖和，记得带好小帽子哟"
+
 # 随机颜色
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
@@ -152,6 +161,10 @@ data = {
   },
   "notes":{
     "value":notes,
+    "color":get_random_color()
+  },
+  "tips":{
+    "value":get_tips(),
     "color":get_random_color()
   }
 }
