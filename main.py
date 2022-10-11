@@ -147,7 +147,7 @@ data = {
     "color": get_random_color()
   },
   "words": {
-    "value": get_words(),
+    "value": "如果我说不吻你不罢休，谁能逼我将就。              ---李荣浩《不将就》",
     "color": get_random_color()
   },
   "notes":{
