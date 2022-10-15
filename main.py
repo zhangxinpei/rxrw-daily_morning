@@ -80,10 +80,10 @@ def format_temperature(temperature):
 
 def get_tips():
   lowset = math.floor(weather['low'])
-  if lowset < 20:
+  if lowset < 19:
     return "今天温度较低，小可爱记得添衣哦~"
   elif lowset <25:
-    return "今天温度始终，小可爱正常穿小外套就好咯~"
+    return "今天温度适中，小可爱正常穿小外套就好咯~"
   else:
     return "今天温度较暖和，记得带好小帽子哟~"
 
